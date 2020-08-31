@@ -2,14 +2,12 @@
 
 ## Description
 
-Output is also sent to Serial in tab separeated values format:
+A simple Amperimeter (or [Ammeter](https://en.wikipedia.org/wiki/Ammeter)) using a readily-available hall effect current sensor. Output is both to the LCD and to Serial in tab-separeated-value format:
 
-
-`average read from sensor \t voltage \t current`
-
+`average_read_from_sensor \t voltage \t current`
 
 In my tests the output voltage for no-load (0 current) from
-the ACS712 looks unreliable. Supposedly the bias (or offset)
+the ACS-712 looks unreliable. Supposedly the bias (or offset)
 should be 2.5 volts but it varies a lot. I've implemented a
 calibration / zeroing procedure at startup to average the 
 values read without load and take that value as the actual
